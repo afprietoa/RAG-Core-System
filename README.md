@@ -170,13 +170,7 @@ pytest -m integration -v
 ```
 
 Los formatos de salida esperados para `ingest` y `query`, con ejemplos
-ilustrativos completos, están documentados en
-[`spec/fase-04-ingesta-documentos.md`](spec/fase-04-ingesta-documentos.md) y
-[`spec/fase-08-cli.md`](spec/fase-08-cli.md) respectivamente. **Antes de la
-entrega final de la asignatura, reemplaza esta sección por la salida real**
-obtenida al correr los comandos anteriores (ver
-[`spec/fase-10-documentacion-repositorio.md`](spec/fase-10-documentacion-repositorio.md),
-pasos 3 y 4, para el procedimiento exacto).
+ilustrativos completos, 
 
 ## Variables de entorno
 
@@ -231,24 +225,8 @@ RAG/
 - No hay soporte multi-turno (memoria de conversación) — cada consulta al CLI
   es independiente.
 - La eliminación de contenido obsoleto tras editar un documento fuente ya
-  ingerido requiere limpieza manual (ver `spec/fase-04-ingesta-documentos.md`,
-  tabla de errores).
+  ingerido requiere limpieza manual
 - Ver la sección "Estado de verificación" arriba para lo que aún requiere
   Docker y una clave de API real para probarse de extremo a extremo.
 
-## Documentación de diseño e implementación
 
-El proceso completo de diseño e implementación, fase por fase, con código
-completo, comandos y solución de errores, está en [`spec/`](spec/):
-
-- [`plan-implementacion-rag.md`](spec/plan-implementacion-rag.md) — plan general
-- [`fase-01-preparacion.md`](spec/fase-01-preparacion.md)
-- [`fase-02-dependencias-configuracion.md`](spec/fase-02-dependencias-configuracion.md)
-- [`fase-03-docker-pgvector.md`](spec/fase-03-docker-pgvector.md)
-- [`fase-04-ingesta-documentos.md`](spec/fase-04-ingesta-documentos.md)
-- [`fase-05-recuperacion-contexto.md`](spec/fase-05-recuperacion-contexto.md)
-- [`fase-06-estado-grafo-langgraph.md`](spec/fase-06-estado-grafo-langgraph.md)
-- [`fase-07-generacion-llm.md`](spec/fase-07-generacion-llm.md)
-- [`fase-08-cli.md`](spec/fase-08-cli.md)
-- [`fase-09-pruebas.md`](spec/fase-09-pruebas.md)
-- [`fase-10-documentacion-repositorio.md`](spec/fase-10-documentacion-repositorio.md)
