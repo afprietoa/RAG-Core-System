@@ -1,0 +1,45 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Bytecode y cachés de Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+build/
+dist/
+
+# Variables de entorno y secretos
+.env
+.env.*
+!.env.example
+
+# Datos de prueba de PostgreSQL (si se usa un volumen bind local)
+docker/pgdata/
+
+# Documentos ingeridos por el usuario (se conserva el ejemplo versionado)
+data/documents/*
+!data/documents/.gitkeep
+!data/documents/pgvector_intro.txt
+
+# Cachés de pruebas y linters
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# Cachés de modelos descargados localmente (sentence-transformers)
+.cache/
+
+# Archivos del editor / SO
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Estado local de herramientas de asistencia (no forma parte del proyecto)
+.claude/

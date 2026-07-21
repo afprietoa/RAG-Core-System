@@ -1,0 +1,44 @@
+# Pines verificados: instalación real y suite de pruebas ejecutadas con éxito
+# sobre esta combinación exacta de versiones (Python 3.11, Windows), tras
+# resolver dos conflictos de dependencias transitivas (langchain-core y
+# pgvector) y una incompatibilidad de API entre typer 0.13.0 y click 8.2+.
+
+# --- Orquestación ---
+langchain==0.3.7
+langchain-core==0.3.63
+langchain-community==0.3.7
+langchain-text-splitters==0.3.2
+langgraph==0.2.53
+
+# --- LLM (proveedor seleccionable via LLM_PROVIDER: anthropic | gemini) ---
+langchain-anthropic==0.3.0
+langchain-google-genai==2.0.6
+
+# --- Embeddings (HuggingFace local, proveedor por defecto) ---
+langchain-huggingface==0.1.2
+sentence-transformers==3.2.1
+
+# --- Vector store (PostgreSQL + PGVector) ---
+# pgvector fijado en 0.2.5: langchain-postgres 0.0.12 requiere pgvector<0.3.0.
+langchain-postgres==0.0.12
+psycopg[binary]==3.2.3
+pgvector==0.2.5
+
+# --- Loaders de documentos ---
+pypdf==5.1.0
+
+# --- Configuración ---
+pydantic==2.9.2
+pydantic-settings==2.6.1
+python-dotenv==1.0.1
+
+# --- Interfaz de línea de comandos ---
+# click fijado por debajo de 8.2: typer 0.13.0 usa la API de rich_utils que
+# click 8.2+ rompe (Parameter.make_metavar cambió de firma).
+typer==0.13.0
+click==8.1.8
+rich==13.9.4
+
+# --- Pruebas ---
+pytest==8.3.3
+pytest-asyncio==0.24.0

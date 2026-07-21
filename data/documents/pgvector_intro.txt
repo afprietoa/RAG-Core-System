@@ -1,0 +1,17 @@
+PGVector es una extension de codigo abierto para PostgreSQL que agrega un tipo de
+dato "vector" y operadores de busqueda por similitud (distancia euclidiana, coseno
+y producto interno). Permite almacenar embeddings generados por modelos de lenguaje
+directamente en una tabla de PostgreSQL y realizar busquedas de vecinos mas cercanos
+(k-NN) usando indices como IVFFlat o HNSW.
+
+En un sistema de Retrieval-Augmented Generation (RAG), PGVector se usa tipicamente
+como la base de datos vectorial donde se almacenan los fragmentos (chunks) de los
+documentos ingeridos, junto con sus embeddings. Cuando un usuario hace una pregunta,
+el sistema convierte la pregunta en un embedding y busca en PGVector los fragmentos
+mas similares semanticamente, para luego pasarlos como contexto a un modelo de
+lenguaje (LLM) que genera la respuesta final.
+
+La forma mas sencilla de ejecutar PGVector localmente es mediante Docker, usando la
+imagen oficial pgvector/pgvector, que ya incluye PostgreSQL con la extension
+preinstalada. Esto evita instalar PostgreSQL y compilar la extension manualmente en
+el sistema operativo anfitrion.
