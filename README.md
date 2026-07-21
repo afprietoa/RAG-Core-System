@@ -36,9 +36,7 @@ Pregunta del usuario
 ```
 
 Ambos nodos están definidos con LangGraph (`src/rag_system/graph/`) y comparten
-un estado tipado (`RAGState`). El diseño e implementación completos están
-documentados fase a fase en [`spec/`](spec/), empezando por
-[`spec/plan-implementacion-rag.md`](spec/plan-implementacion-rag.md).
+un estado tipado (`RAGState`).
 
 ## Requisitos previos
 
